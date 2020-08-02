@@ -16,7 +16,7 @@ public class Listener implements org.bukkit.event.Listener {
             world = world.replace("craftworld{name=", "");
             world = world.replace("}", "");
             boolean cancel = false;
-            if (!event.getPlayer().hasPermission("koshi.nowe")) {
+            if (!event.getPlayer().hasPermission("gpwe.nowe")) {
                 Boolean isCmd = false;
                 for (String cm : Settings.getConfig().getStringList("Settings.WorldEditCmds")) {
                     if(cmd.startsWith(cm)) {
