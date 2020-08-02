@@ -1,0 +1,6 @@
+name: GriefPrevention-Worldedit
+version: ${project.version}
+main: Main
+api-version: 1.13
+authors: [Floffah, _ForgeUser21498071]
+description: Stops worldedit from being used outside of claims.

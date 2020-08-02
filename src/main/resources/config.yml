@@ -1,0 +1,18 @@
+Settings:
+  # Messages
+  DenyMsg: '&8[&Anti-Worldedit&8] &7You can only use worldedit inside of a claim that is yours'
+  # User plugin metrics, sends statistics about this plugin
+  pluginMetrics: 'true'
+  # Players who can bypass this plugin
+  Bypass:
+    - 00000000-0000-0000-0000-000000000000
+  # Worlds it will block worldedit commands
+  Worlds:
+    - world
+  # Commands to block that must be inside of their claim
+  WorldEditCmds:
+    - wand
+    - replace
+    - undo
+    - redo
+    - set
