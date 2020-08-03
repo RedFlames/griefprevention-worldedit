@@ -6,7 +6,7 @@
 
     <groupId>dev.floffah</groupId>
     <artifactId>GriefPrevention-Worldedit</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.2-hotfix1</version>
     <packaging>jar</packaging>
 
     <name>GriefPrevention Worldedit</name>
