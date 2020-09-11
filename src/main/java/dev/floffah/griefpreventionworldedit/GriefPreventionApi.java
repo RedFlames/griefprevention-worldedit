@@ -26,23 +26,23 @@ public class GriefPreventionApi {
     public static boolean canWorldEdit(final Player p) {
         return canWorldEditLocation(p, p.getLocation());
     }
-	
+    
     public static boolean canWorldEditLocation(final Player p, final Location l) {
         boolean result = false;
         final Claim claim = GriefPreventionApi.ess.dataStore.getClaimAt(l, true, (Claim) null);
-		
-		if (claim == null || p == null) return false;
-		
+        
+        if (claim == null || p == null) return false;
+        
         if ((claim.ownerID != null && claim.ownerID.equals(p.getUniqueId())) || claim.getPermission(p.getUniqueId().toString()) == ClaimPermission.Build) {
             result = true;
         }
         return result;
     }
-	
-	public static Claim getClaimAt(final Location l) {
-	    return GriefPreventionApi.ess.dataStore.getClaimAt(l, true, (Claim) null);
-	}
-	
+    
+    public static Claim getClaimAt(final Location l) {
+        return GriefPreventionApi.ess.dataStore.getClaimAt(l, true, (Claim) null);
+    }
+    
     public static ClaimPermission getPermission(final Player p) {
         ClaimPermission result = null;
         final Claim claim = GriefPreventionApi.ess.dataStore.getClaimAt(p.getLocation(), true, (Claim) null);
@@ -51,8 +51,8 @@ public class GriefPreventionApi {
         }
         return result;
     }
-	
-	
+    
+    
     public static UUID getOwner(final Player p) {
         UUID result = null;
         final Claim claim = GriefPreventionApi.ess.dataStore.getClaimAt(p.getLocation(), true, (Claim) null);
@@ -61,5 +61,5 @@ public class GriefPreventionApi {
         }
         return result;
     }
-	
+    
 }

@@ -24,39 +24,39 @@ public class WorldeditApi {
             WorldeditApi.usePlugin = true;
         }
     }
-	
+
     public static Region getSelection(final Player p) {
         final LocalSession sess = ess.getSession(p);
-		if (sess == null) {
-			return null;
-		}
-		
-		if (sess.isSelectionDefined(BukkitAdapter.adapt(p.getWorld()))) {
-			try {
-				return sess.getSelection(BukkitAdapter.adapt(p.getWorld()));
-			} catch(IncompleteRegionException e) {
-				return null;
-			}
-		}
-		return null;
-	}
+        if (sess == null) {
+            return null;
+        }
+
+        if (sess.isSelectionDefined(BukkitAdapter.adapt(p.getWorld()))) {
+            try {
+                return sess.getSelection(BukkitAdapter.adapt(p.getWorld()));
+            } catch(IncompleteRegionException e) {
+                return null;
+            }
+        }
+        return null;
+    }
 
     public static boolean selectionInGPClaim(final Player p, final Region sel) {
         boolean result = false;
-		
+        
         if (sel == null) {
             return true;
         }
-		
-		Location selMin = BukkitAdapter.adapt(p.getWorld(), sel.getMinimumPoint());
-		Location selMax = BukkitAdapter.adapt(p.getWorld(), sel.getMaximumPoint());
-		
-		if ( GriefPreventionApi.canWorldEditLocation(p, selMin) 
-		  && GriefPreventionApi.canWorldEditLocation(p, selMax)
-	      && GriefPreventionApi.getClaimAt(selMin).getID() == GriefPreventionApi.getClaimAt(selMax).getID()) {
-			  return true;
-		  }
-		
+        
+        Location selMin = BukkitAdapter.adapt(p.getWorld(), sel.getMinimumPoint());
+        Location selMax = BukkitAdapter.adapt(p.getWorld(), sel.getMaximumPoint());
+        
+        if ( GriefPreventionApi.canWorldEditLocation(p, selMin)
+          && GriefPreventionApi.canWorldEditLocation(p, selMax)
+          && GriefPreventionApi.getClaimAt(selMin).getID() == GriefPreventionApi.getClaimAt(selMax).getID()) {
+              return true;
+          }
+        
         return result;
     }
 }
