@@ -9,6 +9,11 @@ Settings:
   # Worlds it will block worldedit commands
   Worlds:
     - world
+
+  # WARNING: The following lists are not exhaustive and by default everything that isn't on
+  # these two lists won't get restricted at all.
+  # i strongly recommend using a Permissions plugin to restrict WorldEdit access.
+
   # Commands to block that must be inside of their claim
   WorldEditCmds:
     - wand
@@ -16,3 +21,9 @@ Settings:
     - undo
     - redo
     - set
+  # Commands that don't work on a selection outside user's claim
+  RestrictRegionToClaim:
+    - set
+    - replace
+    - copy
+    - paste

@@ -2,6 +2,6 @@ name: GriefPrevention-Worldedit
 version: ${project.version}
 main: dev.floffah.griefpreventionworldedit.Main
 api-version: 1.13
-authors: [Floffah, _ForgeUser21498071]
+authors: [Floffah, _ForgeUser21498071, RedFlames]
 description: Stops worldedit from being used outside of claims.
 depend: [GriefPrevention, WorldEdit]

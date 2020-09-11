@@ -43,6 +43,7 @@ public class Main extends JavaPlugin
                     e.printStackTrace();
                 }
                 GriefPreventionApi.init();
+				WorldeditApi.init();
             }
         });
     }
